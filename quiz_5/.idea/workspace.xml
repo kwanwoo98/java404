@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="042b91eb-3040-46b8-8e26-71166f85f196" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/java404.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules/jdbcex.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules/jdbcex.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbcex/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbcex/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbcex/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbcex/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbcex/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbcex/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbcex/src/test/java/org/zerock/dao/ConnectTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbcex2/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbcex2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbcex2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbcex2/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbcex2/src/main/java/ogrg/zerock/jdbcex2/HelloServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbcex2/src/main/java/ogrg/zerock/jdbcex2/domain/TodoVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jdbcex2/src/test/java/org/zerock/dao/ConnectTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../openCSVTest/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz3.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_2/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_2/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_2/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_2/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_2/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_2/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_2/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_2/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_2/src/main/java/ogrg/zerock/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_3/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_3/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_3/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_3/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_3/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_3/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_3/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_3/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_3/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_3/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_3/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_3/src/main/java/ogrg/zerock/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4/quiz4_LKW.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4/src/main/java/ogrg/zerock/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4_1/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4_1/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4_1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4_1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4_1/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4_1/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4_1/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4_1/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4_1/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4_1/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4_1/quiz4_LKW.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4_1/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quiz_4_1/src/main/java/ogrg/zerock/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ogrg/zerock/GsonTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ogrg/zerock/TagoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ogrg/zerock/tsdfa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test3write1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test3write2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test3write3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test3write4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../excel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../excel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../excel/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../excel/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../excel/src/main/java/com/bitc/java404/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../excel/src/main/java/com/bitc/java404/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../excel/src/main/java/com/bitc/java404/UseExcel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../excel/src/main/java/com/bitc/java404/UseExcel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../excel/src/main/java/com/bitc/java404/dto/CulturalDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../excel/src/main/java/com/bitc/java404/dto/CulturalDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsonParser/src/main/java/com/bitc/java404/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsonParser/src/main/java/com/bitc/java404/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCSVTest/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../openCSVTest/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../parserToDB/src/main/java/com/bitc/java404/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../parserToDB/src/main/java/com/bitc/java404/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testwrite1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../testwrite1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testwrite2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../testwrite2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testwrite3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../testwrite3.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="quiz_5" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2f818WYXisDEnEb33nfrTOCu9xh" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.quiz_5 [:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/java404/quiz_2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="042b91eb-3040-46b8-8e26-71166f85f196" name="변경" comment="" />
+      <created>1713167733710</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713167733710</updated>
+      <workItem from="1713167734836" duration="5426000" />
+      <workItem from="1713327984918" duration="41000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

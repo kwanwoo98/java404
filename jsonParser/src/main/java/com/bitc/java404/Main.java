@@ -44,7 +44,7 @@ public class Main {
     catch (Exception e) {
 
     }
-    
+
 //    문제 1) 영화 진흥원 API 중 일간 박스 오피스 API를 사용하여 지정한 날짜의 박스 오피스 내용을 가져와서 화면에 출력하는 프로그램을 작성하세요
 //    메소드명 : dailyBoxOfficeUrl(String url);
 //    main 메소드에서 dailyBoxOfficeUrl()로 url 전달 시 날짜를 입력할 수 있도록 작성

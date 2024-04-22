@@ -44,59 +44,59 @@ public class Main {
   }
 
   public static void main(String[] args) {
-//    dbTest();
+    dbTest();
 
-//    ParserToDB parse = new ParserToDB();
-//    parse.insertDB();
-//    parse.selectDB();
-//    System.out.println("----- 데이터 삭제 -----");
-//    parse.deleteDB("test3");
-//    parse.selectDB();
-//    System.out.println("----- 데이터 수정 -----");
-//    parse.updateDB();
-//    parse.selectDB();
+    ParserToDB parse = new ParserToDB();
+    parse.insertDB();
+    parse.selectDB();
+    System.out.println("----- 데이터 삭제 -----");
+    parse.deleteDB("test3");
+    parse.selectDB();
+    System.out.println("----- 데이터 수정 -----");
+    parse.updateDB();
+    parse.selectDB();
 
 //    사용자 데이터 추가하기
-//    MemberDTO member = new MemberDTO();
-//    member.setUser_id("test4");
-//    member.setUser_pw("1234");
-//    member.setUser_name("테스트유저4");
-//    member.setUser_email("testuser4@bitc.ac.kr");
-//    member.setUser_phone("01012349876");
-//    member.setUser_addr("서울");
+    MemberDTO member = new MemberDTO();
+    member.setUser_id("test4");
+    member.setUser_pw("1234");
+    member.setUser_name("테스트유저4");
+    member.setUser_email("testuser4@bitc.ac.kr");
+    member.setUser_phone("01012349876");
+    member.setUser_addr("서울");
 
-//    ParserToDB parser = new ParserToDB();
-//    System.out.println("----- 기존 사용자 정보 확인 -----");
-//    parser.selectDB();
-//    System.out.println("----- 사용자 정보 추가 -----");
-//    parser.insertDB(member);
-//    System.out.println("----- 추가 후 전체 사용자 정보 확인 -----");
-//    parser.selectDB();
+    ParserToDB parser = new ParserToDB();
+    System.out.println("----- 기존 사용자 정보 확인 -----");
+    parser.selectDB();
+    System.out.println("----- 사용자 정보 추가 -----");
+    parser.insertDB(member);
+    System.out.println("----- 추가 후 전체 사용자 정보 확인 -----");
+    parser.selectDB();
 
-//    member.setUser_id("test5");
-//    member.setUser_pw("4321");
-//    member.setUser_name("테스트유저5");
-//    member.setUser_email("testuser5@bitc.ac.kr");
-//    member.setUser_phone("01011223344");
-//    member.setUser_addr("대전");
+    member.setUser_id("test5");
+    member.setUser_pw("4321");
+    member.setUser_name("테스트유저5");
+    member.setUser_email("testuser5@bitc.ac.kr");
+    member.setUser_phone("01011223344");
+    member.setUser_addr("대전");
 
-//    System.out.println("----- 새 사용자 정보 추가 -----");
-//    parser.insertDB(member);
-//    System.out.println("----- 추가 후 전체 사용자 정보 확인 -----");
-//    parser.selectDB();
+    System.out.println("----- 새 사용자 정보 추가 -----");
+    parser.insertDB(member);
+    System.out.println("----- 추가 후 전체 사용자 정보 확인 -----");
+    parser.selectDB();
 
-//    System.out.println("----- 데이터 수정하기 -----");
-//
-//    member.setUser_id("test5");
-//    member.setUser_pw("1234567890");
-//    member.setUser_name("유저테스터5");
-//    member.setUser_email("user5@bitc.ac.kr");
-//    member.setUser_phone("01011223344");
-//    member.setUser_addr("대전");
-//
-//    parser.updateDB(member);
-//    System.out.println("----- 데이터 수정 후 전체 내용 확인 -----");
-//    parser.selectDB();
+    System.out.println("----- 데이터 수정하기 -----");
+
+    member.setUser_id("test5");
+    member.setUser_pw("1234567890");
+    member.setUser_name("유저테스터5");
+    member.setUser_email("user5@bitc.ac.kr");
+    member.setUser_phone("01011223344");
+    member.setUser_addr("대전");
+
+    parser.updateDB(member);
+    System.out.println("----- 데이터 수정 후 전체 내용 확인 -----");
+    parser.selectDB();
 
     System.out.println("\n ----- url을 통해 받아온 json 데이터를 DB에 저장하기 -----\n");
 
@@ -116,7 +116,7 @@ public class Main {
 //    jsonToObjectUrl() 를 실행하여 api 서비스에 접속하여 json데이터를 가져와서 파싱함
     List<DailyBoxOfficeList> itemList = boxOfficeParser.jsonToObjectUrl(serviceUrl);
 
-    
+
     for (DailyBoxOfficeList item : itemList) {
 //      insertDailyBoxOffice()를 실행하여 DBMS에 접속하여 DB에 데이터를 추가함
       boxOfficeParser.insertDailyBoxOffice(item);

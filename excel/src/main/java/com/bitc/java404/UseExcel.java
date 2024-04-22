@@ -1,12 +1,12 @@
 package com.bitc.java404;
 
+import com.bitc.java404.dto.CulturalDTO;
 import com.bitc.java404.dto.InteriorDTO;
-import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -17,10 +17,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
 
 public class UseExcel {
 
@@ -452,6 +452,9 @@ public class UseExcel {
   }
 
   private void interiorListToDB(List<InteriorDTO> itemList) {
+
+//    오라클 사용 시
+//    String dbUrl = "jdbc:oracle:thin:@localhost:1521/xe";
     String dbUrl = "jdbc:mysql://localhost:3306/testdb?characterEncoding=utf8&serverTimezone=UTC";
     String dbUser = "java404";
     String dbPass = "java404";
@@ -460,6 +463,8 @@ public class UseExcel {
     PreparedStatement pstmt = null;
 
     try {
+//      오라클 사용 시
+//      Class.forName("oracle.jdbc.driver.OracleDriver");
       Class.forName("com.mysql.cj.jdbc.Driver");
       conn = DriverManager.getConnection(dbUrl, dbUser, dbPass);
 
@@ -514,56 +519,206 @@ public class UseExcel {
       catch (Exception e) {}
     }
   }
-  public void culturalToDB(String fileName) {
+
+//  문제 2) 주어진 엑셀 파일의 내용을 데이터 베이스에 저장하는 프로그램을 작성하세요
+//  엑셀파일 : cultural.xlsx
+//  DTO 클래스 생성(CulturalDTO)
+//  DB 테이블 : cultural
+//  컬럼 : name(문화재명), addr1(소재지), care(관리주체), code(지정번호), reg_dt(지정일자), age(시대), type(종별), care_tel(담당자 전화번호), addr2(구군명), upd_dt(데이터 기준일자), lat(위도), lng(경도)
+
+  private boolean fileInfo2(String fileName) {
+    File file = new File(fileName);
+    String ext = file.getName().substring(file.getName().lastIndexOf(".") + 1);
+
+    if (ext.equals("xlsx")) {
+      return true;
+    }
+
+    return false;
+  }
+
+  public void culturalInfo(String fileName) throws FileNotFoundException {
+    List<CulturalDTO> itemList = null;
+
+    if (fileInfo2(fileName)) {
+      itemList = culturalInfoParse(new FileInputStream(fileName));
+    }
+    else {
+      System.out.println("지원하지 않는 파일 형식입니다.");
+    }
+
+    culturalInfoDBInsert(itemList);
+  }
+
+  public List<CulturalDTO> culturalInfoParse(InputStream fis) {
+    List<CulturalDTO> itemList = new ArrayList<>();
+
+    XSSFWorkbook workbook = null;
+    XSSFSheet sheet = null;
+
+    try {
+      workbook = new XSSFWorkbook(fis);
+      sheet = workbook.getSheetAt(0);
+
+      int rowLength = sheet.getPhysicalNumberOfRows();
+
+      for (int i = 1; i < rowLength; i++) {
+        XSSFRow row = sheet.getRow(i);
+        CulturalDTO item = new CulturalDTO();
+
+        if (row != null) {
+          int cellLength = row.getPhysicalNumberOfCells();
+
+          for (int j = 0; j < cellLength; j++) {
+            XSSFCell cell = row.getCell(j);
+            String value = "";
+
+            if (cell == null) {
+              continue;
+            }
+            else {
+              switch (cell.getCellType()) {
+                case FORMULA:
+                  value = cell.getCellFormula();
+                  break;
+
+                case STRING:
+                  value = cell.getStringCellValue();
+                  break;
+
+                case NUMERIC:
+//                  날짜 정보가 NUMERIC으로 타입이 설정되어 있음
+//                  getNumericCellValue()로 날자 데이터를 받으면 실수형 데이터가 넘어옴
+//                  POI 라이브러리의 DataFormatter 클래스 타입의 객체를 선언
+//                  formatCellValue(cell) 를 실행하면 cell의 값을 입력된 그대로 가져옴
+                  DataFormatter formatter = new DataFormatter();
+                  value = formatter.formatCellValue(cell);
+                  value = value.replace("/", "-");
+                  break;
+
+                case BLANK:
+                  value = String.valueOf(cell.getBooleanCellValue());
+                  break;
+
+                case ERROR:
+                  value = String.valueOf(cell.getErrorCellValue());
+                  break;
+              }
+
+              switch (j) {
+                case 0:
+                  item.setName(value);
+                  break;
+
+                case 1:
+                  item.setAddr1(value);
+                  break;
+
+                case 2:
+                  item.setCare(value);
+                  break;
+
+                case 3:
+                  item.setCode(value);
+                  break;
+
+                case 4:
+                  item.setReg_dt(value);
+                  break;
+
+                case 5:
+                  item.setAge(value);
+                  break;
+
+                case 6:
+                  item.setType(value);
+                  break;
+
+                case 7:
+                  item.setCare_tel(value);
+                  break;
+
+                case 8:
+                  item.setAddr2(value);
+                  break;
+
+                case 9:
+                  item.setUpd_dt(value);
+                  break;
+
+                case 10:
+                  item.setLat(value);
+                  break;
+
+                case 11:
+                  item.setLat(value);
+                  break;
+
+                case 12:
+                  item.setLng(value);
+                  break;
+              }
+            }
+          }
+        }
+        itemList.add(item);
+      }
+    } catch (IOException e) {
+    }
+
+    return itemList;
+  }
+
+  public void culturalInfoDBInsert(List<CulturalDTO> itemList) {
     String dbUrl = "jdbc:mysql://localhost:3306/testdb?characterEncoding=utf8&serverTimezone=UTC";
     String dbUser = "java404";
     String dbPass = "java404";
 
-    try (FileInputStream fis = new FileInputStream(fileName);
-         Workbook workbook = WorkbookFactory.create(fis);
-         Connection conn = DriverManager.getConnection(dbUrl, dbUser, dbPass)) {
+    Connection conn = null;
+    PreparedStatement pstmt = null;
 
-      Sheet sheet = workbook.getSheetAt(0);
+    try {
+      Class.forName("com.mysql.cj.jdbc.Driver");
+      conn = DriverManager.getConnection(dbUrl, dbUser, dbPass);
 
-      String sql = "INSERT INTO cultural (name, addr1, care, code, reg_dt, age, type, care_tel, addr2, upd_dt, lat, lng) " +
-              "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-      try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
-        for (int i = 1; i <= sheet.getLastRowNum(); i++) {
-          Row row = sheet.getRow(i);
-          if (row != null) {
-            setValuesToPreparedStatement(row, pstmt);
-            pstmt.executeUpdate();
-          }
-        }
+      String sql = "insert into cultural (name, addr1, care, code, reg_dt, age, type, care_tel, addr2, upd_dt, lat, lng) ";
+      sql += "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ";
+
+      pstmt = conn.prepareStatement(sql);
+
+      for (CulturalDTO item : itemList) {
+        pstmt.setString(1, item.getName());
+        pstmt.setString(2, item.getAddr1());
+        pstmt.setString(3, item.getCare());
+        pstmt.setString(4, item.getCode());
+        pstmt.setString(5, item.getReg_dt());
+        pstmt.setString(6, item.getAge());
+        pstmt.setString(7, item.getType());
+        pstmt.setString(8, item.getCare_tel());
+        pstmt.setString(9, item.getAddr2());
+        pstmt.setString(10, item.getUpd_dt());
+        pstmt.setString(11, item.getLat());
+        pstmt.setString(12, item.getLng());
+
+        pstmt.addBatch();
+        pstmt.clearParameters();
       }
-      System.out.println("데이터베이스에 저장되었습니다.");
-    } catch (IOException | SQLException | EncryptedDocumentException e) {
-      e.printStackTrace();
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-  }
+      pstmt.executeBatch();
 
-  private void setValuesToPreparedStatement(Row row, PreparedStatement pstmt) throws SQLException {
-    for (int j = 0; j < row.getLastCellNum(); j++) {
-      Cell cell = row.getCell(j);
-      pstmt.setString(j + 1, getStringCellValue(cell));
+      System.out.println(" ***** 데이터 베이스 입력 완료 ***** ");
     }
-  }
-
-  private String getStringCellValue(Cell cell) {
-    if (cell == null) {
-      return "";
-    } else {
-      switch (cell.getCellType()) {
-        case STRING:
-          return cell.getStringCellValue();
-        case NUMERIC:
-          // NUMERIC 셀의 값을 문자열로 변환하여 반환합니다.
-          return String.valueOf(cell.getNumericCellValue());
-        default:
-          return "";
+    catch (SQLException e) {
+      System.out.println("데이터 베이스 사용 중 오류가 발생했습니다.");
+    }
+    catch (Exception e) {
+      System.out.println(e.getMessage());
+    }
+    finally {
+      try {
+        if (pstmt != null) { pstmt.close(); }
+        if (conn != null) { conn.close(); }
       }
+      catch (Exception e) {}
     }
   }
 }
